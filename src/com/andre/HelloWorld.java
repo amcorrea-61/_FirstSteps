@@ -48,9 +48,12 @@ public class HelloWorld {
 			name = scanner.nextLine();
 			person.setName(name);
 			System.out.println( msgTypeYourYearOfBirt);
-			yearOfBirth = Integer.valueOf(scanner.nextLine());
-			person.setYearOfBirth(yearOfBirth);
-			
+			String input = scanner.nextLine();
+			if(!input.equals("") && input != null) {
+				yearOfBirth = Integer.valueOf(input);
+				person.setYearOfBirth(yearOfBirth);
+			}
+
 			personList.add(person);
 			
 			System.out.println("Deseja continuar? ");

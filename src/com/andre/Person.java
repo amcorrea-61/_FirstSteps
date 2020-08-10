@@ -19,7 +19,12 @@ public class Person {
 
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 
-		return currentYear - this.getYearOfBirth();	
+		if(yearOfBirth != null) {
+			return currentYear - this.getYearOfBirth();
+		} else {
+			return yearOfBirth;
+		}
+		
 	}
 	public Integer getYearOfBirth(){
 		return this.yearOfBirth;	
